@@ -10,7 +10,6 @@ test("Deve criar um passageiro", async function () {
 	const accountService = new AccountService();
 	const output = await accountService.signup(input);
 	const account = await accountService.getAccount(output.accountId);
-	console.log(account);
 	expect(account.account_id).toBeDefined();
 	expect(account.name).toBe(input.name);
 	expect(account.email).toBe(input.email);
